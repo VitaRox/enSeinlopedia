@@ -1,0 +1,24 @@
+title {
+	color:cyan;
+	text-transform: full-width;
+}
+
+
+
+
+h1 {
+	color:darkviolet;
+	text-align:center;
+	text-transform:uppercase;;
+}
+
+h2 {
+	color:darkgrey;
+	text-transform:capitalize;
+	background-color: green;
+	border-style:dashed;
+}
+
+h3 {
+	color:blueviolet;
+}

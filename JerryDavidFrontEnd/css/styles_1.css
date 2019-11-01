@@ -3,20 +3,30 @@ title {
 	text-transform: full-width;
 }
 
+#queryResultsRequestForm {
 
+	text-align: center;
 
+}
+/*
+	Remember, this affects the text in this class;
+*/
+p.dataReturnCheckboxes {
+	color: green;
+
+}
 
 h1 {
 	color:darkviolet;
 	text-align:center;
-	text-transform:uppercase;;
+	text-transform:uppercase;
 }
 
 h2 {
 	color:darkgrey;
-	text-transform:capitalize;
 	background-color: green;
-	border-style:dashed;
+	border-style:inset;
+	align-content:flex-start;
 }
 
 h3 {

@@ -6,6 +6,14 @@
 		<link rel="stylesheet" href="css/styles_1.css" type="text/css">
         <script language = "javascript" type = "text/javascript">
             <!--
+
+			/* These two vars are used to control the behavior of the
+			   checkboxes in the 'The Goods' section, that is,
+			 */ to tell what info to query the database for;
+			var returnCharName = false;
+			var returnEpisodes = false;
+
+			// This will pass to app.js, our Node entry-point file;
 			function validateForm()
 			{
 
@@ -15,12 +23,21 @@
     </head>
 	<body>
 		<h1>Welcome to JerryDavid, a Seinfeld Database About Nothing</h1>
-		
-	 	<form name="queryResultsRequestForm">
+
+	 	<form name="queryResultsRequestForm" id="queryResultsRequestForm">
 			Character name: <input type="text"><br />
 
-			Query that thing! <input type="button"><br />
-					<input type="button" value="Submit" onclick="validateForm()">
+			<!--
+			Only needs one button or the other;
+			Add checkboxes to tel what type of data to return;
+			The Goods: the types of info you want returned from our schema;
+			//-->
+			<h2>The Goods</h2>
+				<p class="dataReturnCheckboxes">
+					Character Name<input type="checkbox"><br />
+					In Episodes<input type="checkbox"><br />
+				</p>
+			Query that thing!<input type="button" value="Submit" 		onclick="validateForm()">
 		</form>
 	</body>
 </html>

@@ -3,12 +3,10 @@ title {
 	text-transform: full-width;
 }
 
-
-
-charName {
-	color:blue;
-
+p.dataReturnCheckboxes {
+	text-align: center;
 }
+
 h1 {
 	color:darkviolet;
 	text-align:center;
@@ -16,10 +14,10 @@ h1 {
 }
 
 h2 {
-	color:darkgrey;
-	text-transform:capitalize;
-	background-color: green;
-	border-style:dashed;
+	color:magenta;
+	text-align: center;
+	background-color: grey;
+	border-style:inset;;
 }
 
 h3 {

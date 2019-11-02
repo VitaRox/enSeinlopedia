@@ -6,21 +6,43 @@
 		<link rel="stylesheet" href="css/styles_1.css" type="text/css">
         <script language = "javascript" type = "text/javascript">
             <!--
+			let nameBox = false;
+			let episodesBox = false;
+			var charName = document.queryResultsRequestForm.charName.value;
+
 			function validateForm()
 			{
 
 			}
+
+			var checker1 = document.getElementById("nameBox");
+			var checker2 = document.getElementById("episodesBox");
+			// This handler will be executed only once when the cursor
+			// moves over the unordered list
+			checker.addEventListener("mouseenter", function( event ) {
+				// highlight the mouseenter target
+				event.target.style.color = "purple";
+
+		    // reset the color after a short delay
+		    setTimeout(function() {
+		    	event.target.style.color = "";
+		  		}, 500);
+				}, false);
+
+			checker.addEventListener("mouseover", function( event ) {
+  				// highlight the mouseover target
+  				event.target.style.color = "orange";
             //-->
         </script>
     </head>
 	<body>
 		<h1>Welcome to JerryDavid, a Seinfeld Database About Nothing</h1>
-		
-	 	<form name="queryResultsRequestForm">
-			Character name: <input type="text"><br />
 
-			Query that thing! <input type="button"><br />
-					<input type="button" value="Submit" onclick="validateForm()">
+	 	<form name="queryResultsRequestForm">
+			Character name:<input type="text" name="charName"><br />
+
+			Query that thing!<input type="button"><br />
+					<input type="button" value="Submit" onmouseover="" onclick="validateForm()">
 		</form>
 	</body>
 </html>

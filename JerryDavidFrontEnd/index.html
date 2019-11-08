@@ -6,38 +6,47 @@
 		<link rel="stylesheet" href="css/styles_1.css" type="text/css">
         <script language = "javascript" type = "text/javascript">
             <!--
+			let nameBox = false;
+			let episodesBox = false;
+			var charName = document.queryResultsRequestForm.charName.value;
 
-			/* These two vars are used to control the behavior of the
-			   checkboxes in the 'The Goods' section, that is,
-			 */ to tell what info to query the database for;
-			var returnCharName = false;
-			var returnEpisodes = false;
-
-			// This will pass to app.js, our Node entry-point file;
 			function validateForm()
 			{
 
 			}
+
+			var checker1 = document.getElementById("nameBox");
+			var checker2 = document.getElementById("episodesBox");
+			// This handler will be executed only once when the cursor
+			// moves over the unordered list
+			checker.addEventListener("mouseenter", function( event ) {
+				// highlight the mouseenter target
+				event.target.style.color = "purple";
+
+		    // reset the color after a short delay
+		    setTimeout(function() {
+		    	event.target.style.color = "";
+		  		}, 500);
+				}, false);
+
+			checker.addEventListener("mouseover", function( event ) {
+  				// highlight the mouseover target
+  				event.target.style.color = "orange";
             //-->
         </script>
     </head>
 	<body>
 		<h1>Welcome to JerryDavid, a Seinfeld Database About Nothing</h1>
-
-	 	<form name="queryResultsRequestForm" id="queryResultsRequestForm">
-			Character name: <input type="text"><br />
-
-			<!--
-			Only needs one button or the other;
-			Add checkboxes to tel what type of data to return;
-			The Goods: the types of info you want returned from our schema;
-			//-->
 			<h2>The Goods</h2>
 				<p class="dataReturnCheckboxes">
-					Character Name<input type="checkbox"><br />
-					In Episodes<input type="checkbox"><br />
+						Character Name<input type="checkbox" name="nameBox"><br />
+						In Episodes<input type="checkbox" name="episodesBox"><br />
 				</p>
-			Query that thing!<input type="button" value="Submit" 		onclick="validateForm()">
+	 	<form name="queryResultsRequestForm">
+			Character name:<input type="text" name="charName"><br />
+
+			Query that thing!
+				<input type="button" value="Submit" onclick="validateForm()">
 		</form>
 	</body>
 </html>
